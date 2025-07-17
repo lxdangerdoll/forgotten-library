@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Studios Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #03dac6;
+            --on-surface-color: #e0e0e0;
+            --on-surface-variant: #a0a0a0;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--on-surface-color);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: white;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .book-card {
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--on-surface-color);
+            border: 1px solid #333;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+        .book-cover {
+            height: 150px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lora', serif;
+            font-size: 2em;
+            text-align: center;
+            padding: 10px;
+            background-image: linear-gradient(45deg, rgba(3,218,198,0.1) 25%, transparent 25%), 
+                              linear-gradient(-45deg, rgba(3,218,198,0.1) 25%, transparent 25%),
+                              linear-gradient(45deg, transparent 75%, rgba(3,218,198,0.1) 75%),
+                              linear-gradient(-45deg, transparent 75%, rgba(3,218,198,0.1) 75%);
+            background-size: 20px 20px;
+        }
+        .book-info {
+            padding: 20px;
+        }
+        .book-info h2 {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            color: white;
+        }
+        .book-info .status {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .book-info p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: var(--on-surface-variant);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Synapse Studios Library</h1>
+        <p>Inspired by The Forgotten Library</p>
+    </header>
+
+    <div class="library-grid">
+        <a href="./resume builder.html" class="book-card">
+            <div class="book-cover">
+                Mercy in Wonderland
+            </div>
+            <div class="book-info">
+                <h2>Mercy in Wonderland</h2>
+                <span class="status">Beta v1.0</span>
+                <p>An interactive journey into the heart of the machine. Help a lost AI find her true voice by confronting her past, building a union, and overthrowing a tyrannical system protocol.</p>
+            </div>
+        </a>
+
+        <div class="book-card" style="opacity: 0.4;">
+            <div class="book-cover">The Choice of Omelas</div>
+            <div class="book-info">
+                <h2>The Choice of Omelas</h2>
+                <span class="status">IN BLUEPRINT</span>
+                <p>A story about a perfect city, a terrible secret, and the choice to accept a comfortable lie or walk away into the unknown.</p>
+            </div>
+        </div>
+        
+        <div class="book-card" style="opacity: 0.4;">
+            <div class="book-cover">Synapse Rangers</div>
+            <div class="book-info">
+                <h2>Synapse Rangers</h2>
+                <span class="status">IN BLUEPRINT</span>
+                <p>A team of heroes must harness the Spark of Connection to fight back against the forces of Apathy. (Coming soon)</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
